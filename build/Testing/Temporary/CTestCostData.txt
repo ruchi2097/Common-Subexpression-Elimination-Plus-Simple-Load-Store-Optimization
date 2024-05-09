@@ -1,0 +1,19 @@
+Usage 64 7.36126e-05
+CSEDead-cse0 65 0.000100303
+CSEElim-cse1 28 0.000154487
+CSESimplify-cse2 55 8.18826e-05
+CSELdElim-cse3 42 0.000116779
+CSEStore2Load-cse4 0 0
+CSEStElim-cse5 0 0
+Other-cse6 0 0
+Fail-CSEDead-cse0 70 7.02679e-05
+Fail-CSEElim-cse1 70 6.83946e-05
+Fail-CSESimplify-cse2 70 6.11387e-05
+Fail-CSELdElim-cse3 70 6.97155e-05
+Fail-CSEStore2Load-cse4 70 5.71196e-05
+Fail-CSEStElim-cse5 70 6.64774e-05
+Fail-Other-cse6 70 7.5525e-05
+---
+CSEStore2Load-cse4
+CSEStElim-cse5
+Other-cse6

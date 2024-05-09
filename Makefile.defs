@@ -1,0 +1,33 @@
+# Config settings
+
+
+
+# Tools we need
+CUSTOMTOOL=projects/p2
+CUSTOMCODEGEN=
+FAULTINJECTTOOL=
+PROFILER=
+P1TOOL=true
+P2TOOL=
+CLANG=/usr/bin/clang-17
+OPT=/usr/bin/opt-17
+LLC=/usr/bin/llc-17
+LLVMAS=/usr/bin/llvm-as-17
+LLVM_LINK=/usr/bin/llvm-link-17
+LLVM_CONFIG=/usr/bin/llvm-config-17
+LLVM_DIS=/usr/bin/llvm-dis-17
+DRAGONEGG=
+GCC=/usr/bin/gcc
+
+LIBS=
+PLIBS=`cd /ece566/projects/p2/C++/../../../wolfbench/../projects/install/lib/; pwd`/librt.a `$(LLVM_CONFIG) --libdir`/libprofile_rt.a
+
+RUN=/ece566/projects/p2/C++/../../../wolfbench/RunSafelyAndStable.sh 60 1 
+
+DIFF=/ece566/projects/p2/C++/../../../wolfbench/RunDiff.sh
+
+EXTRA_SUFFIX=
+
+ifdef DEBUG
+CFLAGS+=-g
+endif

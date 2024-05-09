@@ -1,0 +1,655 @@
+Start testing: Mar 25 21:18 UTC
+----------------------------------------------------------
+1/15 Testing: Usage
+1/15 Test: Usage
+Command: "/ece566/projects/p2/C++/build/p2" "-h"
+Directory: /ece566/projects/p2/C++/build
+"Usage" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+OVERVIEW: llvm system compiler
+
+USAGE: p2 [options] <input bitcode> <output bitcode>
+
+OPTIONS:
+
+Color Options:
+
+  --color                                           - Use colors in output (default=autodetect)
+
+General options:
+
+  --abort-on-max-devirt-iterations-reached          - Abort when the max iterations for devirtualization CGSCC repeat pass is reached
+  --cfg-hide-cold-paths=<number>                    - Hide blocks with relative frequency below the given value
+  --cfg-hide-deoptimize-paths                       - 
+  --cfg-hide-unreachable-paths                      - 
+  --cost-kind=<value>                               - Target cost kind
+    =throughput                                     -   Reciprocal throughput
+    =latency                                        -   Instruction latency
+    =code-size                                      -   Code size
+    =size-latency                                   -   Code size and latency
+  --debugify-func-limit=<ulong>                     - Set max number of processed functions per pass.
+  --debugify-level=<value>                          - Kind of debug info to add
+    =locations                                      -   Locations only
+    =location+variables                             -   Locations and Variables
+  --debugify-quiet                                  - Suppress verbose debugify output
+  --disable-auto-upgrade-debug-info                 - Disable autoupgrade of debug info
+  --disable-i2p-p2i-opt                             - Disables inttoptr/ptrtoint roundtrip optimization
+  --dot-cfg-mssa=<file name for generated dot file> - file name for generated dot file
+  --enable-gvn-memdep                               - 
+  --enable-load-in-loop-pre                         - 
+  --enable-load-pre                                 - 
+  --enable-loop-simplifycfg-term-folding            - 
+  --enable-name-compression                         - Enable name/filename string compression
+  --enable-split-backedge-in-load-pre               - 
+  --experimental-debug-variable-locations           - Use experimental new value-tracking variable locations
+  --fs-profile-debug-bw-threshold=<uint>            - Only show debug message if the source branch weight is greater  than this value.
+  --fs-profile-debug-prob-diff-threshold=<uint>     - Only show debug message if the branch probility is greater than this value (in percentage).
+  --generate-merged-base-profiles                   - When generating nested context-sensitive profiles, always generate extra base profile for function with all its context profiles merged into it.
+  --instcombine-code-sinking                        - Enable code sinking
+  --instcombine-guard-widening-window=<uint>        - How wide an instruction window to bypass looking for another guard
+  --instcombine-max-num-phis=<uint>                 - Maximum number phis to handle in intptr/ptrint folding
+  --instcombine-max-sink-users=<uint>               - Maximum number of undroppable users for instruction sinking
+  --instcombine-maxarray-size=<uint>                - Maximum array size considered when doing a combine
+  --instcombine-negator-enabled                     - Should we attempt to sink negations?
+  --instcombine-negator-max-depth=<uint>            - What is the maximal lookup depth when trying to check for viability of negation sinking.
+  --mem2reg                                         - Perform memory to register promotion before CSE.
+  --mir-strip-debugify-only                         - Should mir-strip-debug only strip debug info from debugified modules by default
+  --misexpect-tolerance=<uint>                      - Prevents emiting diagnostics when profile counts are within N% of the threshold..
+  --no                                              - Do not check for valid IR.
+  --no-cse                                          - Do not perform CSE Optimization.
+  --sample-profile-check-record-coverage=<N>        - Emit a warning if less than N% of records in the input profile are matched to the IR.
+  --sample-profile-check-sample-coverage=<N>        - Emit a warning if less than N% of samples in the input profile are matched to the IR.
+  --sample-profile-max-propagate-iterations=<uint>  - Maximum number of iterations to go through when propagating sample block/edge weights through the CFG.
+  --type-based-intrinsic-cost                       - Calculate intrinsics cost based only on argument types
+  --verbose                                         - Verbose stats.
+  --verify-region-info                              - Verify region info (time consuming)
+
+Generic Options:
+
+  --help                                            - Display available options (--help-hidden for more)
+  --help-list                                       - Display list of available options (--help-list-hidden for more)
+  --version                                         - Display the version of this program
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[USAGE:]
+"Usage" end time: Mar 25 21:18 UTC
+"Usage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/15 Testing: CSEDead-cse0
+2/15 Test: CSEDead-cse0
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse0-out.ll" "/ece566/projects/p2/C++/tests/cse0.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSEDead-cse0" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"CSEDead-cse0" end time: Mar 25 21:18 UTC
+"CSEDead-cse0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/15 Testing: CSEElim-cse1
+3/15 Test: CSEElim-cse1
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse1-out.ll" "/ece566/projects/p2/C++/tests/cse1.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSEElim-cse1" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CSEElim-cse1" end time: Mar 25 21:18 UTC
+"CSEElim-cse1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/15 Testing: CSESimplify-cse2
+4/15 Test: CSESimplify-cse2
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse2-out.ll" "/ece566/projects/p2/C++/tests/cse2.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSESimplify-cse2" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CSESimplify-cse2" end time: Mar 25 21:18 UTC
+"CSESimplify-cse2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/15 Testing: CSELdElim-cse3
+5/15 Test: CSELdElim-cse3
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse3-out.ll" "/ece566/projects/p2/C++/tests/cse3.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSELdElim-cse3" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CSELdElim-cse3" end time: Mar 25 21:18 UTC
+"CSELdElim-cse3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/15 Testing: CSEStore2Load-cse4
+6/15 Test: CSEStore2Load-cse4
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse4-out.ll" "/ece566/projects/p2/C++/tests/cse4.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSEStore2Load-cse4" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse4.ll:10:15: error: CHECK-NEXT: expected string not found in input
+; CHECK-NEXT: alloca
+              ^
+/ece566/projects/p2/C++/build/tests/cse4-out.ll:6:13: note: scanning from here
+ %A = alloca i32, align 4
+            ^
+/ece566/projects/p2/C++/build/tests/cse4-out.ll:6:19: note: possible intended match here
+ %A = alloca i32, align 4
+                  ^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse4-out.ll
+Check file: /ece566/projects/p2/C++/tests/cse4.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+           1: ; ModuleID = 'cse4-out.bc' 
+           2: source_filename = "cse4" 
+           3:  
+           4: define i32 @cse4(ptr %0, ptr %1, ptr %2, i32 %3, i64 %4, i8 %5) { 
+           5: BB: 
+           6:  %A = alloca i32, align 4 
+next:10'0                 X~~~~~~~~~~~~~ error: no match found
+next:10'1                       ?        possible intended match
+           7:  store i32 -1, ptr %A, align 4 
+next:10'0     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+           8:  ret i32 0 
+next:10'0     ~~~~~~~~~~~
+           9: } 
+next:10'0     ~~
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"CSEStore2Load-cse4" end time: Mar 25 21:18 UTC
+"CSEStore2Load-cse4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/15 Testing: CSEStElim-cse5
+7/15 Test: CSEStElim-cse5
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse5-out.ll" "/ece566/projects/p2/C++/tests/cse5.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"CSEStElim-cse5" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse5.ll:9:15: error: CHECK-NEXT: expected string not found in input
+; CHECK-NEXT: alloca
+              ^
+/ece566/projects/p2/C++/build/tests/cse5-out.ll:6:13: note: scanning from here
+ %A = alloca i32, align 4
+            ^
+/ece566/projects/p2/C++/build/tests/cse5-out.ll:6:19: note: possible intended match here
+ %A = alloca i32, align 4
+                  ^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse5-out.ll
+Check file: /ece566/projects/p2/C++/tests/cse5.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+          1: ; ModuleID = 'cse5-out.bc' 
+          2: source_filename = "cse5" 
+          3:  
+          4: define void @cse5(ptr %0, ptr %1, ptr %2, i32 %3, i64 %4, i8 %5) { 
+          5: BB: 
+          6:  %A = alloca i32, align 4 
+next:9'0                 X~~~~~~~~~~~~~ error: no match found
+next:9'1                       ?        possible intended match
+          7:  store i32 0, ptr %A, align 4 
+next:9'0     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          8:  ret void 
+next:9'0     ~~~~~~~~~~
+          9: } 
+next:9'0     ~~
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"CSEStElim-cse5" end time: Mar 25 21:18 UTC
+"CSEStElim-cse5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/15 Testing: Other-cse6
+8/15 Test: Other-cse6
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse6-out.ll" "/ece566/projects/p2/C++/tests/cse6.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Other-cse6" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse6.ll:12:15: error: CHECK-NEXT: expected string not found in input
+; CHECK-NEXT: load
+              ^
+/ece566/projects/p2/C++/build/tests/cse6-out.ll:9:7: note: scanning from here
+ store i32 %6, ptr %A, align 4
+      ^
+/ece566/projects/p2/C++/build/tests/cse6-out.ll:9:22: note: possible intended match here
+ store i32 %6, ptr %A, align 4
+                     ^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse6-out.ll
+Check file: /ece566/projects/p2/C++/tests/cse6.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+           1: ; ModuleID = 'cse6-out.bc' 
+           2: source_filename = "cse6" 
+           3:  
+           4: define i32 @cse6(ptr %0, ptr %1, ptr %2, i32 %3, i64 %4, i8 %5) { 
+           5: BB: 
+           6:  %A = alloca i32, align 4 
+           7:  %A1 = alloca i16, align 2 
+           8:  %6 = and i32 %3, 77033 
+           9:  store i32 %6, ptr %A, align 4 
+next:12'0           X~~~~~~~~~~~~~~~~~~~~~~~~ error: no match found
+next:12'1                          ?          possible intended match
+          10:  store i32 77033, ptr %A, align 4 
+next:12'0     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          11:  %Cmp = icmp sge i32 %6, %3 
+next:12'0     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          12:  br i1 %Cmp, label %BB3, label %BB4 
+next:12'0     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          13:  
+next:12'0     ~
+          14: BB3: ; preds = %BB 
+next:12'0     ~~~~
+           .
+           .
+           .
+>>>>>>
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"Other-cse6" end time: Mar 25 21:18 UTC
+"Other-cse6" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/15 Testing: Fail-CSEDead-cse0
+9/15 Test: Fail-CSEDead-cse0
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse0-nocse.ll" "/ece566/projects/p2/C++/tests/cse0.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSEDead-cse0" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse0.ll:17:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: ret void
+              ^
+/ece566/projects/p2/C++/build/tests/cse0-nocse.ll:12:2: note: 'next' match was here
+ ret void
+ ^
+/ece566/projects/p2/C++/build/tests/cse0-nocse.ll:5:3: note: previous match ended here
+BB:
+  ^
+/ece566/projects/p2/C++/build/tests/cse0-nocse.ll:6:1: note: non-matching line after previous match is here
+ %B = lshr i32 %3, %3
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse0-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse0.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         .
+         .
+         .
+         7:  %6 = lshr i32 %3, %3 
+         8:  %7 = lshr i32 %3, %3 
+         9:  %8 = lshr i32 %3, %3 
+        10:  %9 = lshr i32 %3, %3 
+        11:  %10 = lshr i32 %3, %3 
+        12:  ret void 
+next:17      !~~~~~~~  error: match on wrong line
+        13: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSEDead-cse0" end time: Mar 25 21:18 UTC
+"Fail-CSEDead-cse0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/15 Testing: Fail-CSEElim-cse1
+10/15 Test: Fail-CSEElim-cse1
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse1-nocse.ll" "/ece566/projects/p2/C++/tests/cse1.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSEElim-cse1" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse1.ll:17:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: store
+              ^
+/ece566/projects/p2/C++/build/tests/cse1-nocse.ll:16:2: note: 'next' match was here
+ store i32 %6, ptr %A2, align 4
+ ^
+/ece566/projects/p2/C++/build/tests/cse1-nocse.ll:14:11: note: previous match ended here
+ %B = lshr i32 %L, %L4
+          ^
+/ece566/projects/p2/C++/build/tests/cse1-nocse.ll:15:1: note: non-matching line after previous match is here
+ %6 = lshr i32 %L, %L4
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse1-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse1.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         .
+         .
+         .
+        11:  store i32 %3, ptr %A1, align 4 
+        12:  %L = load i32, ptr %A, align 4 
+        13:  %L4 = load i32, ptr %A1, align 4 
+        14:  %B = lshr i32 %L, %L4 
+        15:  %6 = lshr i32 %L, %L4 
+        16:  store i32 %6, ptr %A2, align 4 
+next:17      !~~~~                           error: match on wrong line
+        17:  store i32 %B, ptr %A3, align 4 
+        18:  ret i32 %3 
+        19: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSEElim-cse1" end time: Mar 25 21:18 UTC
+"Fail-CSEElim-cse1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/15 Testing: Fail-CSESimplify-cse2
+11/15 Test: Fail-CSESimplify-cse2
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse2-nocse.ll" "/ece566/projects/p2/C++/tests/cse2.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSESimplify-cse2" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse2.ll:7:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: ret
+              ^
+/ece566/projects/p2/C++/build/tests/cse2-nocse.ll:9:2: note: 'next' match was here
+ ret i32 %8
+ ^
+/ece566/projects/p2/C++/build/tests/cse2-nocse.ll:5:3: note: previous match ended here
+BB:
+  ^
+/ece566/projects/p2/C++/build/tests/cse2-nocse.ll:6:1: note: non-matching line after previous match is here
+ %6 = lshr i32 0, -1
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse2-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse2.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+        1: ; ModuleID = 'cse2-nocse.bc' 
+        2: source_filename = "cse2" 
+        3:  
+        4: define i32 @cse2(ptr %0, ptr %1, ptr %2, i32 %3, i64 %4, i8 %5) { 
+        5: BB: 
+        6:  %6 = lshr i32 0, -1 
+        7:  %7 = and i32 0, -1 
+        8:  %8 = udiv i32 %6, %7 
+        9:  ret i32 %8 
+next:7      !~~         error: match on wrong line
+       10: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSESimplify-cse2" end time: Mar 25 21:18 UTC
+"Fail-CSESimplify-cse2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/15 Testing: Fail-CSELdElim-cse3
+12/15 Test: Fail-CSELdElim-cse3
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse3-nocse.ll" "/ece566/projects/p2/C++/tests/cse3.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSELdElim-cse3" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse3.ll:11:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: ret i32
+              ^
+/ece566/projects/p2/C++/build/tests/cse3-nocse.ll:11:2: note: 'next' match was here
+ ret i32 %6
+ ^
+/ece566/projects/p2/C++/build/tests/cse3-nocse.ll:8:11: note: previous match ended here
+ %L = load i32, ptr %A, align 4
+          ^
+/ece566/projects/p2/C++/build/tests/cse3-nocse.ll:9:1: note: non-matching line after previous match is here
+ %L2 = load i32, ptr %A, align 4
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse3-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse3.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         .
+         .
+         .
+         6:  %A = alloca i32, align 4 
+         7:  %A1 = alloca i32, align 4 
+         8:  %L = load i32, ptr %A, align 4 
+         9:  %L2 = load i32, ptr %A, align 4 
+        10:  %6 = and i32 %L, %L2 
+        11:  ret i32 %6 
+next:11      !~~~~~~     error: match on wrong line
+        12: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSELdElim-cse3" end time: Mar 25 21:18 UTC
+"Fail-CSELdElim-cse3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/15 Testing: Fail-CSEStore2Load-cse4
+13/15 Test: Fail-CSEStore2Load-cse4
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse4-nocse.ll" "/ece566/projects/p2/C++/tests/cse4.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSEStore2Load-cse4" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse4.ll:12:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: ret i32
+              ^
+/ece566/projects/p2/C++/build/tests/cse4-nocse.ll:12:2: note: 'next' match was here
+ ret i32 %7
+ ^
+/ece566/projects/p2/C++/build/tests/cse4-nocse.ll:8:7: note: previous match ended here
+ store i32 -1, ptr %A, align 4
+      ^
+/ece566/projects/p2/C++/build/tests/cse4-nocse.ll:9:1: note: non-matching line after previous match is here
+ %L = load i32, ptr %A, align 4
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse4-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse4.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         .
+         .
+         .
+         7:  %A1 = alloca i32, align 4 
+         8:  store i32 -1, ptr %A, align 4 
+         9:  %L = load i32, ptr %A, align 4 
+        10:  %6 = sdiv i32 %L, 255838 
+        11:  %7 = srem i32 %6, %3 
+        12:  ret i32 %7 
+next:12      !~~~~~~     error: match on wrong line
+        13: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSEStore2Load-cse4" end time: Mar 25 21:18 UTC
+"Fail-CSEStore2Load-cse4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/15 Testing: Fail-CSEStElim-cse5
+14/15 Test: Fail-CSEStElim-cse5
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse5-nocse.ll" "/ece566/projects/p2/C++/tests/cse5.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-CSEStElim-cse5" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse5.ll:11:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: ret void
+              ^
+/ece566/projects/p2/C++/build/tests/cse5-nocse.ll:10:2: note: 'next' match was here
+ ret void
+ ^
+/ece566/projects/p2/C++/build/tests/cse5-nocse.ll:8:7: note: previous match ended here
+ store i32 -1, ptr %A, align 4
+      ^
+/ece566/projects/p2/C++/build/tests/cse5-nocse.ll:9:1: note: non-matching line after previous match is here
+ store i32 0, ptr %A, align 4
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse5-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse5.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         .
+         .
+         .
+         5: BB: 
+         6:  %A = alloca i32, align 4 
+         7:  %A1 = alloca i32, align 4 
+         8:  store i32 -1, ptr %A, align 4 
+         9:  store i32 0, ptr %A, align 4 
+        10:  ret void 
+next:11      !~~~~~~~  error: match on wrong line
+        11: } 
+>>>>>>
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-CSEStElim-cse5" end time: Mar 25 21:18 UTC
+"Fail-CSEStElim-cse5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/15 Testing: Fail-Other-cse6
+15/15 Test: Fail-Other-cse6
+Command: "/usr/bin/FileCheck-17" "--input-file=/ece566/projects/p2/C++/build/tests/cse6-nocse.ll" "/ece566/projects/p2/C++/tests/cse6.ll"
+Directory: /ece566/projects/p2/C++/build/tests
+"Fail-Other-cse6" start time: Mar 25 21:18 UTC
+Output:
+----------------------------------------------------------
+/ece566/projects/p2/C++/tests/cse6.ll:9:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: alloca
+              ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:8:8: note: 'next' match was here
+ %A1 = alloca i16, align 2
+       ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:6:13: note: previous match ended here
+ %A = alloca i32, align 4
+            ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:7:1: note: non-matching line after previous match is here
+ store i32 %3, ptr %A, align 4
+^
+/ece566/projects/p2/C++/tests/cse6.ll:77:15: error: CHECK-NEXT: is not on the line after the previous match
+; CHECK-NEXT: store
+              ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:46:2: note: 'next' match was here
+ store i32 %14, ptr %A, align 4
+ ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:43:13: note: previous match ended here
+ %L13 = load i32, ptr %A, align 4
+            ^
+/ece566/projects/p2/C++/build/tests/cse6-nocse.ll:44:1: note: non-matching line after previous match is here
+ %13 = and i32 %L13, %L13
+^
+
+Input file: /ece566/projects/p2/C++/build/tests/cse6-nocse.ll
+Check file: /ece566/projects/p2/C++/tests/cse6.ll
+
+-dump-input=help explains the following input dump.
+
+Input was:
+<<<<<<
+         1: ; ModuleID = 'cse6-nocse.bc' 
+         2: source_filename = "cse6" 
+         3:  
+         4: define i32 @cse6(ptr %0, ptr %1, ptr %2, i32 %3, i64 %4, i8 %5) { 
+         5: BB: 
+         6:  %A = alloca i32, align 4 
+         7:  store i32 %3, ptr %A, align 4 
+         8:  %A1 = alloca i16, align 2 
+next:9             !~~~~~               error: match on wrong line
+         9:  %L = load i32, ptr %A, align 4 
+        10:  %6 = and i32 %L, 77033 
+        11:  %7 = and i32 %6, 77033 
+        12:  store i32 %7, ptr %A, align 4 
+        13:  %8 = and i32 %6, 77033 
+         .
+         .
+         .
+        41:  
+        42: BB9: ; preds = %BB8 
+        43:  %L13 = load i32, ptr %A, align 4 
+        44:  %13 = and i32 %L13, %L13 
+        45:  %14 = sub i32 %L13, %13 
+        46:  store i32 %14, ptr %A, align 4 
+next:77      !~~~~                           error: match on wrong line
+        47:  br label %BB8 
+        48:  
+        49: BB10: ; preds = %BB8 
+        50:  store i32 %L, ptr %A, align 4 
+        51:  ret i32 %L 
+        52: } 
+>>>>>>
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Fail-Other-cse6" end time: Mar 25 21:18 UTC
+"Fail-Other-cse6" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 25 21:18 UTC
